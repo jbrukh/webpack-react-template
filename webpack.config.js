@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 16:07:29
+* @Last Modified time: 2016-11-14 17:02:59
 */
 
 'use strict';
@@ -23,7 +23,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   // app entry point
-  entry: './app/index.js',
+  entry: './app/index.jsx',
 
   // All JS gets bundled into this single
   // bundle and placed in the dist/ directory.
