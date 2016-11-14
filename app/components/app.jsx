@@ -1,16 +1,17 @@
 import React from 'react'
-import Router from 'react-router'
-import Counter from './Counter'
+import {Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import AboutPage from '../pages/AboutPage'
+import HomePage from '../pages/HomePage'
 
 require('../styles/global.scss')
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Welcome to the homepage.</h1>
-        <Counter />
-      </div>
+      <Router history={hashHistory}>
+        <Route path='/' component={HomePage} />
+        <Route path='/about' component={AboutPage} />
+      </Router>
     );
   }
 }
