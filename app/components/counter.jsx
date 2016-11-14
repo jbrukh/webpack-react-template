@@ -1,5 +1,7 @@
 import React from 'react';
 
+require('./counter.scss');
+
 class Counter extends React.Component {
 
   constructor(props) {

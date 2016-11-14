@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 15:21:00
+* @Last Modified time: 2016-11-14 15:49:04
 */
 
 'use strict';
@@ -15,6 +15,9 @@ var HtmlPluginConfig = new HtmlPlugin({
   filename: 'index.html',
   inject: 'body'
 });
+
+// To combine all SCSS into a single CSS file.
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
@@ -45,15 +48,25 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: [ 'style', 'css', 'sass' ]
+        loader: ExtractTextPlugin.extract(
+            'style', // The backup style loader
+            'css?sourceMap!sass?sourceMap'
+        )
       }
+    ]
+  },
+
+  sassLoader: {
+    includePaths: [
+      'app/styles'
     ]
   },
 
   // HTML Webpack Plugin will generate the
   // index.html that will appear in dist/ directory.
   plugins: [
-    HtmlPluginConfig
+    HtmlPluginConfig,
+    new ExtractTextPlugin('styles.css')
   ],
 
   resolve: {
