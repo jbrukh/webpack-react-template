@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 15:49:04
+* @Last Modified time: 2016-11-14 16:07:29
 */
 
 'use strict';
@@ -36,15 +36,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: [
-            'react',
-            'es2015'
-          ]
-        }
+        loaders: ['babel-loader']
       },
       {
         test: /\.scss$/,
