@@ -1,9 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
+import Counter from './counter';
 
 class App extends React.Component {
   render() {
-    return <h1>Hello world, {this.props.name}!</h1>;
+    return (
+      <div>
+        <h1>Hello world, {this.props.name}!</h1>
+        <Counter />
+      </div>
+    );
   }
 }
 
