@@ -1,0 +1,19 @@
+{
+  "name": "webpack-react-template",
+  "version": "0.0.1",
+  "description": "Template for Webpack/React sites.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbrukh/webpack-react-template.git"
+  },
+  "author": "Jake Brukhman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbrukh/webpack-react-template/issues"
+  },
+  "homepage": "https://github.com/jbrukh/webpack-react-template#readme"
+}
