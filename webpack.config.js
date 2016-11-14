@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 14:40:40
+* @Last Modified time: 2016-11-14 15:21:00
 */
 
 'use strict';
@@ -42,6 +42,10 @@ module.exports = {
             'es2015'
           ]
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: [ 'style', 'css', 'sass' ]
       }
     ]
   },
@@ -55,6 +59,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+
+  devtool: 'source-map',
 
   watch: true
 };
