@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 14:24:57
+* @Last Modified time: 2016-11-14 14:37:46
 */
 
 'use strict';
@@ -33,7 +33,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.es6$/,
+        test: /\.jsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
@@ -53,7 +53,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js', '.es6']
+    extensions: ['', '.js', '.jsx']
   },
 
   watch: true
