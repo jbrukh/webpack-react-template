@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Template for Webpack/React sites.",
   "main": "app/index.js",
   "scripts": {
