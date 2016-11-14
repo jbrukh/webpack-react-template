@@ -2,7 +2,7 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 15:46:39
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 15:50:05
+* @Last Modified time: 2016-11-14 17:34:48
 */
 
 html, body {
@@ -10,3 +10,6 @@ html, body {
   color: white;
 }
 
+.active-link {
+  color: red !important;
+}
