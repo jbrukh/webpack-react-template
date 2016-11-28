@@ -2,16 +2,18 @@
 * @Author: Jake Brukhman
 * @Date:   2016-11-14 14:02:00
 * @Last Modified by:   Jake Brukhman
-* @Last Modified time: 2016-11-14 17:02:59
+* @Last Modified time: 2016-11-14 19:55:59
 */
 
 'use strict';
+
+var path    = require('path');
 
 // HTML Webpack Plugin is used to generate the index.html file
 // in dist/.
 var HtmlPlugin = require('html-webpack-plugin');
 var HtmlPluginConfig = new HtmlPlugin({
-  template: __dirname + '/app/index.html',
+  template: path.join(__dirname, 'app/index.html'),
   filename: 'index.html',
   inject: 'body'
 });
@@ -23,13 +25,15 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   // app entry point
-  entry: './app/index.jsx',
+  entry: [
+    './app/index.jsx',
+  ],
 
   // All JS gets bundled into this single
   // bundle and placed in the dist/ directory.
   output: {
     filename: 'bundle.js',             // collect all JS into bundle.js
-    path: __dirname + '/dist',         // copy bundle.js to dist
+    path: path.join(__dirname, 'dist'),         // copy bundle.js to dist
   },
 
   // TODO: loaders
@@ -43,8 +47,8 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
-            'style', // The backup style loader
-            'css?sourceMap!sass?sourceMap'
+          'style', // The backup style loader
+          'css?sourceMap!sass?sourceMap'
         )
       }
     ]

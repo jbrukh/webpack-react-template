@@ -1,5 +1,6 @@
 import React from 'react'
-import {IndexLink} from 'react-router'
+import {Router, IndexLink, RouteHandler} from 'react-router'
+
 
 const Nav = () => (
   <div>
